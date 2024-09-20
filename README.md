@@ -5,13 +5,13 @@ Repository for paper "Global-guided Focal Neural Radiance Field for Large-scale 
 
 ## Abstract
 Neural radiance fields~(NeRF) have recently been applied to render large-scale scenes. However, their limited model capacity typically results in blurred rendering results. Existing large-scale NeRFs primarily address this limitation by partitioning the scene into blocks, which are subsequently handled by separate sub-NeRFs. These sub-NeRFs, trained from scratch and processed independently, lead to inconsistencies in geometry and appearance across the scene. Consequently, the rendering quality fails to exhibit significant improvement despite the expansion of model capacity. In this work, we present global-guided focal neural radiance field (GF-NeRF) that achieves high-fidelity rendering of large-scale scenes. Our proposed GF-NeRF utilizes a two-stage (Global and Focal) architecture and a global-guided training strategy. The global stage obtains a continuous representation of the entire scene while the focal stage decomposes the scene into multiple blocks and further processes them with distinct sub-encoders. Leveraging this two-stage architecture, sub-encoders only need fine-tuning based on the global encoder, thus reducing training complexity in the focal stage while maintaining scene-wide consistency. Spatial information and error information from the global stage also benefit the sub-encoders to focus on crucial areas and effectively capture more details of large-scale scenes. Notably, our approach does not rely on any prior knowledge about the target scene, attributing GF-NeRF adaptable to various large-scale scene types, including street-view and aerial-view scenes. We demonstrate that our method achieves high-fidelity, natural rendering results on various types of large-scale datasets.
+<img src="assets/images/framwork.png" alt="Alt text" width="200"/>
 
 ## Start
 This work was developed on the basis of [Nerfstudio](https://github.com/nerfstudio-project/nerfstudio), and we have modified the internal code of Nerfstudio. Therefore, we recommend using this project in a separate environment from Nerfstudio.
 
 Compiling F2NERF bindings requires appropriate CUDA version support, and we recommend using CUDA 11.8
 
-## Ckpts
 
 ### Installation
 1、Install basic enviroment
